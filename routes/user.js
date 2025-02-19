@@ -6,7 +6,7 @@ const { getAllUser } = require('../controllers/getUser');
 
 router.post("/login",login);
 router.post("/register",signup);
-router.get("/getUser",getAllUser);
+router.get("/getUsers",getAllUser);
 
 
 
