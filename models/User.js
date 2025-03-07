@@ -15,12 +15,16 @@ const userSchema = mongoose.Schema({
         type:Number,
         required:true,
     },
-    password:{
+    dob:{
+        type : String,
+        required : true,
+    },
+    gender:{
         type : String,
         required : true,
 
     },
-    address :{
+    password :{
         type : String,
         required : true,
     }

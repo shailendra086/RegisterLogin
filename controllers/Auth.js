@@ -8,7 +8,7 @@ exports.signup = async(req,res)=>{
     try{
         //get data
 
-        const {name , email,phone , password, address} = req.body;
+        const {name , email,phone ,dob, gender,password } = req.body;
         //check if user already exist 
         const existingUser = await User.findOne({email});
         if(existingUser){
@@ -32,7 +32,7 @@ exports.signup = async(req,res)=>{
 
         //create entry of user
         const user = await User.create({
-            name,email,phone,password : hashedPassword,address
+            name,email,phone,dob ,gender ,password : hashedPassword,
         })
         return res.status(200).json({
             success : true,
